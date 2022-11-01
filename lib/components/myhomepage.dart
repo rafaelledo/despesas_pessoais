@@ -1,24 +1,8 @@
-import 'package:despesas_pessoais/components/transaction_form.dart';
-import 'package:despesas_pessoais/components/transaction_list.dart';
-import 'package:despesas_pessoais/model/transaction.dart';
 import 'package:flutter/material.dart';
+import 'transaction_user.dart';
 
 class MyHomePage extends StatelessWidget {
-  final _transactions = [
-    Transaction(
-      id: 't1',
-      title: 'Novo tênis de corrida',
-      value: 310.76,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Conta de Luz',
-      value: 211.30,
-      date: DateTime.now(),
-    ),
-  ];
-
+  
   MyHomePage({super.key});
 
   @override
@@ -35,8 +19,8 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          const SizedBox(
+        children: const <Widget>[
+           SizedBox(
             child: Card(
               color: Colors.blue,
               elevation: 5,
@@ -46,8 +30,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          TransactionList(transactions: _transactions),
-          TransactionForm(),
+          TransactionUser(),
         ],
       ),
     );
