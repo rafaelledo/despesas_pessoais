@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'transaction_user.dart';
 
 class MyHomePage extends StatelessWidget {
-  
-  MyHomePage({super.key});
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: const <Widget>[
-           SizedBox(
+          SizedBox(
             child: Card(
               color: Colors.blue,
               elevation: 5,
